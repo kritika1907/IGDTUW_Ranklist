@@ -1,0 +1,56 @@
+include ../common/Header
+link(rel="stylesheet", href="/css/Login.css")
+
+body
+  #message-box-modal.modal
+   .modal-content
+    .modal-subcontent.bg-black
+    div.close(onclick="utils.CloseMessageBox()") &times;
+    .modal-subcontent
+     p#message-box-content
+     div.d-flex.justify-content-center
+      button(class= "custom-btn modal-btn" onclick="utils.CloseMessageBox()") 
+       span OK
+  header#navbar-header
+    p.logo Rank List
+    nav
+     ul.nav__links.nav_register
+      a.login-nav-btn(href="/login") Login
+  div.wrapper
+      header SIGNUP
+      form#signup-form(action="/signup", method="POST")
+        .field.username
+          .input-area
+            input(type="text", placeholder="Enter Username",id="name", name="name")
+            i.icon.fas.fa-user-tie
+            i.error.error-icon.fas.fa-exclamation-circle
+          .error.error-txt Username cannot be empty.
+
+        .field.email
+          .input-area
+            input(type="text", placeholder="Enter Email", id="email", name="email")
+            i.icon.fas.fa-envelope
+            i.error.error-icon.fas.fa-exclamation-circle
+          .error.error-txt Enter valid Email Address.
+
+        .field.password
+          .input-area
+            input(type="password", placeholder="Enter Password",id="password", name="password")
+            i.icon.fas.fa-lock
+            i.error.error-icon.fas.fa-exclamation-circle
+          .error.error-txt Enter Password   
+        .field.role
+         .input-area
+            select(id="role", name="role")
+              option(value="" selected disabled) Select Role
+              option(value="admin") Admin
+              option(value="dean") Dean
+              option(value="placement_head") Placement Head
+
+            i.icon.fas.fa-user-tie
+            i.error.error-icon.fas.fa-exclamation-circle
+         .error.error-txt Employee Role cannot be empty.
+
+        input.login-btn(type="submit", value="Register")
+
+script(src="/js/SignupView.js")

@@ -1,0 +1,75 @@
+
+/* Navbar CSS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navbar-header {
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: center;
+    padding: 15px 1%;
+    background-color: #092635;
+  }
+  
+  .logo {
+    /* margin-right: 1330px; */
+    color: #edf0f1;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+    margin-left: 1220px;
+  }
+  
+  .nav_register {
+    margin-left: 1240px;
+  }
+  
+  .nav_dash{
+    margin-left: 1345px;
+  }
+  
+  .goback-button{
+    margin-left: 1px;
+  }
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: #0088a9;
+  }
+  
+  .login-nav-btn {
+    margin-left: 75px;
+    padding: 9px 25px;
+    background-color: rgba(6, 111, 137, 0.8);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }

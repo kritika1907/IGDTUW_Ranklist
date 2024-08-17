@@ -1,0 +1,46 @@
+{
+  "name": "resource_management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "node ./node_modules/frontend-dependencies/index.js",
+    "eslint": "eslint -c rules/.eslintrc.json --fix ./ --format html --output-file report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "frontend-dependencies": "^2.0.0",
+    "http-errors": "^2.0.0",
+    "http-status-codes": "^2.3.0",
+    "joi": "^17.11.0",
+    "pg": "^8.11.3",
+    "pg-format": "^1.0.4",
+    "properties-reader": "^2.3.0",
+    "ps-list": "^8.1.1",
+    "pug": "^3.0.2",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "frontendDependencies": {
+    "name": "frontend-dependencies",
+    "version": "1.0.0",
+    "target": "public/vendors/",
+    "packages": {
+      "apexcharts": {
+        "version": "3.31.0"
+      }
+    }
+  },
+  "devDependencies": {
+    "eslint": "~8.17.0",
+    "eslint-config-prettier": "~8.5.0",
+    "eslint-plugin-node": "~11.1.0",
+    "eslint-plugin-unicorn": "~42.0.0"
+  }
+}

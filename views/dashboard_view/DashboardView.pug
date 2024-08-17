@@ -1,0 +1,39 @@
+include ../common/Header
+link(rel='stylesheet', href='/css/DashboardView.css')
+body
+  #message-box-modal.modal
+   .modal-content
+    .modal-subcontent.bg-black
+    div.close(onclick="utils.CloseMessageBox()") &times;
+    .modal-subcontent
+     p#message-box-content
+     div.d-flex.justify-content-center
+      button(class= "custom-btn modal-btn" onclick="utils.CloseMessageBox()") 
+       span OK
+  #top-nav-bar
+    h2 Rank List
+    div
+      ul.nav-links
+        li  
+          a(href="/logout") Logout
+  #loader.loader
+  .d-flex.jutify-content-center.h-90.flex-direction-column
+    .features
+      h1 FEATURES
+      br
+      h4 College Ranklists 📈
+      br
+      .row
+        each item in ['B. Tech.', 'BCA', 'BBA', 'USICT B. Tech.', 'B. Com. (H)', 'B. Ed.', 'LLB', 'B. A.', 'BHMCT', 'B. Voc.', 'MCA', 'B. Design', 'M. Design', 'M. Planning', 'MBA']
+          div.col-md-4.mb-2.px-4
+            a.btn.btn-dark.btn-block(role='button', href=`/ranklist/${item.toLowerCase().replace(/\s/g, '-')}`)= item
+      br
+      br
+      h4 Student Profiles 👩🏻‍🎓
+      br
+      p.btn-group.flex-wrap
+        a.btn.btn-dark.mr-2.mb-2(role='button', href='/student') Student Profile
+        a.btn.btn-dark.mr-2.mb-2(role='button', href='/search-by-name') Search by Name
+        a.btn.btn-dark.mr-2.mb-2(role='button', href='/upgradation-student') Combined Result of Migration / Upgradation Students
+script(src='/vendors/apexcharts/dist/apexcharts.min.js')
+script(src="/js/DashboardView.js")
